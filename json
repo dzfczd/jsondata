@@ -1,0 +1,130 @@
+ skuData: {
+        // 商品 id
+        // goodsId: '946755',
+        initialSku: "946755",
+        goods_id: "2257",
+        goods_info: {
+          id: "2257", //   id
+          price: 200,
+          title: "床", //  名称
+          imgUrl: "https://img.yzcdn.cn/2.jpg" // 规格类目图片，只有第一个规格类目可以定义图片
+        },
+        quota: 300,
+        // 选择的商品数量
+        selectedNum: 1,
+        // 默认选择的 sku 组合
+        selectedSkuComb: {
+          id: "2257",
+          price: 100,
+          s1: "30349",
+          s2: "1193",
+          s3: "0",
+          stock_num: 111
+        },
+        sku: {
+          // 所有sku规格类目与其值的从属关系，比如商品有颜色和尺码两大类规格，颜色下面又有红色和蓝色两个规格值。
+          // 可以理解为一个商品可以有多个规格类目，一个规格类目下可以有多个规格值。
+          tree: [
+            {
+              k: "颜色", // skuKeyName：规格类目名称
+              v: [
+                {
+                  id: "30349", // skuValueId：规格值 id
+                  name: "红色", // skuValueName：规格值名称
+                  imgUrl:
+                    "https://nkjjq.cn/uploads/product/main_picture/5224304/tv_thumb_1820_-8.jpg" // 规格类目图片，只有第一个规格类目可以定义图片
+                },
+                {
+                  id: "121500",
+                  name: "蓝色",
+                  imgUrl:
+                    "https://nkjjq.cn/uploads/product/main_picture/5224304/tv_thumb_1820_-8.jpg"
+                },
+                {
+                  id: "1215", // skuValueId：规格值 id
+                  name: "白色", // skuValueName：规格值名称
+                  imgUrl:
+                    "https://nkjjq.cn/uploads/product/main_picture/5224304/tv_thumb_1820_-8.jpg" // 规格类目图片，只有第一个规格类目可以定义图片
+                }
+              ],
+              k_s: "s1" // skuKeyStr：sku 组合列表（下方 list）中当前类目对应的 key 值，value 值会是从属于当前类目的一个规格值 id
+            },
+            {
+              k: "尺寸", // skuKeyName：规格类目名称
+              v: [
+                {
+                  id: "1193", // skuValueId：规格值 id
+                  name: "100*100", // skuValueName：规格值名称
+                  imgUrl:
+                    "http://pic.58pic.com/58pic/14/03/02/58V58PICTFk_1024.jpg" // 规格类目图片，只有第一个规格类目可以定义图片
+                },
+                {
+                  id: "119301", // skuValueId：规格值 id
+                  name: "100*200", // skuValueName：规格值名称
+                  imgUrl: "https://img.yzcdn.cn/2.jpg" // 规格类目图片，只有第一个规格类目可以定义图片
+                },
+                {
+                  id: "119302",
+                  name: "200*200",
+                  imgUrl: "https://img.yzcdn.cn/2.jpg"
+                }
+              ],
+              k_s: "s2"
+            }
+          ],
+          // 所有 sku 的组合列表，比如红色、M 码为一个 sku 组合，红色、S 码为另一个组合
+          list: [
+            //红色3个都有
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 15000, // 价格（单位分）
+              s1: "30349", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 110 // 当前 sku 组合对应的库存
+            },
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 100, // 价格（单位分）
+              s1: "30349", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "119301", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 120 // 当前 sku 组合对应的库存
+            },
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 100, // 价格（单位分）
+              s1: "30349", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "119302", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 130 // 当前 sku 组合对应的库存
+            },
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 100, // 价格（单位分）
+              s1: "30349", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "119303", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 140 // 当前 sku 组合对应的库存
+            },
+            ,
+            //蓝色1个有
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 1520, // 价格（单位分）
+              s1: "121500", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 140 // 当前 sku 组合对应的库存
+            },
+            ,
+            //白色一个
+            {
+              id: "2257", // skuId，下单时后端需要
+              price: 1520, // 价格（单位分）
+              s1: "1215", // 规格类目 k_s 为 s1 的对应规格值 id
+              s2: "1193", // 规格类目 k_s 为 s2 的对应规格值 id
+              s3: "0", // 最多包含3个规格值，为0表示不存在该规格
+              stock_num: 300 // 当前 sku 组合对应的库存
+            }
+          ],
